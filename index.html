@@ -4,11 +4,34 @@ layout: default
 
 <div class="row home">
 
-  <div class="small-12 medium-4 medium-offset-4 columns">
+  <div class="small-12 medium-3 columns">
     <img class="profile-photo" src="images/me.jpg">
     <h2>{{ site.title }}</h2>
     <p>{{ site.description }}</p>
     <p><a href="https://twitter.com/marcoffernandes">Follow me at Twitter.</a></p>
+  </div>
+
+  <div class="small-12 medium-9 columns">
+    <h2>Latest posts</h2>
+    <ul class="posts">
+      {% for post in site.posts %}
+        <li>
+          <div class="row">
+            <div class="small-12 medium-4 columns">
+              <img src="{{ post.image }}" />
+            </div>
+            <div class="small-12 medium-8 columns">
+              <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
+              <a class="post-link" target="_new" href="{{ post.external-url | prepend: site.baseurl }}">{{ post.title }}</a>
+              <p>{{ post.content }}</p>
+            </div>
+
+          </div>
+          
+        </li>
+      {% endfor %}
+    </ul>
+
   </div>
 
 </div>
