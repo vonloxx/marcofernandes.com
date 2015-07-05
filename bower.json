@@ -1,0 +1,19 @@
+{
+  "name": "marcofernandes.com",
+  "version": "0.0.0",
+  "homepage": "http://marcofernandes.com",
+  "authors": [
+    "Marco Fernandes <marco@front.no>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/_bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {}
+}
